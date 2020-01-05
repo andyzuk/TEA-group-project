@@ -1,0 +1,72 @@
+Group Project:
+
+We plan to look at factors that influence parental involvement in their child’s education.  
+We will identify the variables that we hypothesize are related to parental involvement.  
+We will look at the variables using descriptive statistics to identify any potential issues, 
+then we will analyze the data using cluster analysis and regression.  We will develop a report.  
+
+Variables:
+GRADE
+SCPUBRI
+SNEIGHBRX
+SEFUTUREX
+FSSPORTX
+FSVOL
+FSMTNG
+FSATCNF
+FSFUND
+FSCOMM
+FSCOUNSL
+FSFREQ
+FCSCHOOL
+FCTEACHR
+FCSTDS
+FCORDER
+FCSUPPRT
+FOSTORY2X
+FOCRAFTS
+FOGAMES
+FOBUILDX
+FOSPORT
+FORESPON
+FOHISTX
+FODINNERX
+FOLIBRAYX
+FOBOOKSTX
+FOCONCRTX
+FOMUSEUMX
+FOZOOX
+FOGROUPX
+FOSPRETEVX
+CDOBYY
+CHISPAN
+CAMIND
+CASIAN
+CPACI
+CWHITE
+CHISPRM
+CSEX
+
+HHTOTALXX
+AGE2015
+HHPARN16X OR HHPARN16_BRD
+NUMSIBSX
+PARGRADEX
+RACEETHN
+ALLGRADEX
+S16CHART
+S16PBV
+HHTOTALXX
+RELATION
+P1EDUC
+P1EMPL
+HWELFTAN
+HWELFST
+HWIC
+HFOODST
+HMEDICAID
+HCHIP
+HSECN8
+TTLHHINC
+OWNRNTHB
+HVINTCOM
