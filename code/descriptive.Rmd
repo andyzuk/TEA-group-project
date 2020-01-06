@@ -1,0 +1,75 @@
+---
+title: "descriptive stats for PFI"
+author: "Andy Zukerberg"
+date: "1/5/2020"
+output: html_document
+---
+
+##This calls the packages needed:
+```{r}
+library(survey)
+library(magrittr)
+library(Hmisc)
+library(dplyr)
+```
+## This selects the variables we plan to use and creates a new files with just these variables called PFI_TEA
+```{r}
+PFI_TEA <- subset(pfi_pu_pert, select = c("basmid", "grade","scpubpri","sneighbrx","sefuturex","fssportx", "fsvol", "fsmtng", "fsatcnfn", "fsptmtng", "fsatcnfn", "fsfundrs", "fscommte", "fscounslr", "fsfreq", "fcschool", "fcteachr", "fcstds", "fcorder","fcsupprt","FOSTORY2X", "focrafts", "fobuildx", "fosport", "forespon", "fohistx", "fodinnerx", "folibrayx", "fobookstx", "foconcrtx", "fomuseumx", "fogroupx", "fosprtevx", "HHPARN16X", "HHPARN16_BRD", "numsibsx", "pargradex", "raceethn", "hwelftan", "hwelfst", "hwic", "hfoodst", "hmedicaid", "hchip", "ownrnthb", "hvintcom","ttlhhinc", "AGE2015"))
+head(PFI_TEA, 10)
+attach(PFI_TEA)
+
+
+```
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Next, we produce some descriptive statistics to look at the variables and drop the valid skips
+```{r}
+describe(PFI_TEA)
+```
+##Now we will run some crosstabs
+```{r}
+mytable <- table(grade, fsvol)
+```
+## we will create a new variable that is a count of how many school parent activites a parent engaged in
+```{r}
+# schoolpart <- count if 1 in "fssportx", fsvol","fsmtng", "fsptmtng", "fsatcnfn", "fsfundrs", "fscommte", "fscounslr" and ("fsfreq >1") 
+```
+
+## we will create a new variable that is a count of the out of school activities a parent participated in 
+```{r}
+# homepart <- count if 1 in "fostory2X", "focrafts", "fogames", "fobuildx", "fosport" , "forespon", "fohistx", and ("fodinnerx >1), "folibrayx", "fobookstx", "foconcrtx", "fomuseumx", "fozoox", "fogroupx", "fosprtevx" 
+```
+## next we will create a variable that is a combination of the two participation variables
+```{r}
+#overallpart <- schoolpart + homepart
+```
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{stan output.var=}
+
+```
