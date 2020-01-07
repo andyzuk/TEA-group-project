@@ -1,0 +1,855 @@
+2016 National Household Education Survey EDAT Extract Codebook
+
+C:\EDAT\NHES\Codebook_200106194103.txt
+
+/*****************************************************************************************
+NOTES:                                                                                  
+   (1) Full sample weights and/or replicate weights are added automatically.
+   (2) Identification numbers are added automatically.
+*****************************************************************************************/
+
+
+
+File:       pfi
+Name:       GRADE
+Position:   14
+Length:     2
+Label:      E1. Grade attending
+
+Description:
+E1. What is this child’s current grade or year of school?
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+2                   2 Full-time kindergarten                                  712        4,507,268.89                5.06                8.47 
+3                   3 Part-time kindergarten                                   85          580,204.79                0.60                1.09 
+4                   4 First grade                                             779        4,103,028.82                5.53                7.71 
+5                   5 Second grade                                            848        3,940,537.38                6.02                7.40 
+6                   6 Third grade                                             915        3,993,057.46                6.50                7.50 
+7                   7 Fourth grade                                            896        3,998,526.47                6.37                7.51 
+8                   8 Fifth grade                                             955        4,073,964.89                6.79                7.65 
+9                   9 Sixth grade                                             946        3,824,451.22                6.72                7.19 
+10                  10 Seventh grade                                        1,051        3,760,326.98                7.47                7.07 
+11                  11 Eighth grade                                         1,115        4,073,805.69                7.92                7.65 
+12                  12 Ninth grade                                          1,168        3,916,828.73                8.30                7.36 
+13                  13 Tenth grade                                          1,290        3,930,419.78                9.17                7.38 
+14                  14 Eleventh grade                                       1,342        3,438,266.21                9.53                6.46 
+15                  15 Twelfth grade                                        1,421        3,222,274.96               10.10                6.05 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       SCPUBPRI
+Position:   16
+Length:     2
+Label:      E2. Type of school
+
+Description:
+E2. What type of school does this child attend?
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Private, Catholic                                       677        1,912,817.76                4.81                3.59 
+2                   2 Private, religious but not Catholic                     460        1,649,963.40                3.27                3.10 
+3                   3 Private, not religious                                  395        1,299,454.95                2.81                2.44 
+4                   4 Public school                                        11,991       46,500,726.17               85.19               87.37 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSSPORTX
+Position:   113
+Length:     2
+Label:      E30. Attend a school event
+
+Description:
+E30. Since the beginning of this school year, has any adult in this child’s household done any of the following things at this child’s school? a. Attended a school or class event, such as a play, dance, sports event, or science fair
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                  10,844       40,677,312.01               77.04               76.43 
+2                   2 No                                                    2,679       10,685,650.26               19.03               20.08 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSVOL
+Position:   115
+Length:     2
+Label:      E30. Serve as a volunteer
+
+Description:
+E30. Since the beginning of this school year, has any adult in this child’s household done any of the following things at this child’s school? Served as a volunteer in this child’s classroom or elsewhere in the school
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   5,718       21,426,411.25               40.63               40.26 
+2                   2 No                                                    7,805       29,936,551.03               55.45               56.25 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSMTNG
+Position:   117
+Length:     2
+Label:      E30. Attend a school meeting
+
+Description:
+E30. Since the beginning of this school year, has any adult in this child’s household done any of the following things at this child’s school? b. Attended a general school meeting, for example, an open house, or a back-to-school night
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                  11,621       43,885,707.63               82.56               82.45 
+2                   2 No                                                    1,902        7,477,254.65               13.51               14.05 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSPTMTNG
+Position:   119
+Length:     2
+Label:      E30. Attend a parent-teacher organization meeting
+
+Description:
+E30. Since the beginning of this school year, has any adult in this child’s household done any of the following things at this child’s school? Attended a meeting of the parent-teacher organization or association
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   6,040       24,031,211.98               42.91               45.15 
+2                   2 No                                                    7,483       27,331,750.30               53.17               51.35 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSATCNFN
+Position:   121
+Length:     2
+Label:      E30. Attend parent-teacher conference
+
+Description:
+E30. Since the beginning of this school year, has any adult in this child’s household done any of the following things at this child’s school? c. Gone to a regularly scheduled parent-teacher conference with this child’s teacher
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                  10,065       39,882,793.35               71.51               74.93 
+2                   2 No                                                    3,458       11,480,168.93               24.57               21.57 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSFUNDRS
+Position:   123
+Length:     2
+Label:      E30. Participate in fundraising
+
+Description:
+E30. Since the beginning of this school year,
+has any adult in this child’s household
+done any of the following things at this
+child’s school? Participated in fundraising
+for the school
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   8,236       30,445,062.99               58.52               57.20 
+2                   2 No                                                    5,287       20,917,899.29               37.56               39.30 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSCOMMTE
+Position:   125
+Length:     2
+Label:      E30. Serve on school committee
+
+Description:
+E30. Since the beginning of this school year, has any adult in this child’s household done any of the following things at this child’s school? d. Served on a school committee
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   1,761        6,242,788.81               12.51               11.73 
+2                   2 No                                                   11,762       45,120,173.47               83.57               84.77 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSCOUNSLR
+Position:   127
+Length:     2
+Label:      E30. Meet with guidance counselor
+
+Description:
+E30. Since the beginning of this school year, has any adult in this child’s household done any of the following things at this child’s school? d. Met with a guidance counselor in person
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   4,923       17,157,881.75               34.98               32.24 
+2                   2 No                                                    8,600       34,205,080.53               61.10               64.27 
+-1                  -1 Valid Skip                                             552        1,861,699.72                3.92                3.50 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FSFREQ
+Position:   129
+Length:     2
+Label:      E31. Times participated in school meetings
+
+Description:
+E31. During this school year, how many times has any adult in the household gone to meetings or participated in activities at this child’s school?
+
+                                                                                                                Frequency                                 Percent                                    Mean                           Std Deviation                     
+Category            Label                                                     Min                 Max          Unweighted Weighted                     Unweighted Weighted                     Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- ------------------- ------------------- ------------------- ------------------- ------------------- ------------------- 
+-1                  -1 Valid Skip                                                                                     552        1,861,699.72                3.92                3.50                                                                                 
+—                                                                           -1.00               99.00                                                                                                7.92                7.52                8.99              517.37 
+TOTAL                                                                                                                 552        1,861,699.72                3.92                3.50                                                                                 
+
+— Indicates nonresponse for the entire instrument
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOSTORY2X
+Position:   377
+Length:     1
+Label:      E42/H22. In the past week, times child has been told a story
+
+Description:
+E42/H22. In the past week, has anyone in your family done the following things with this child? a. Told him/her a story (Do not include reading to this child.)
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   7,991       31,392,851.32               56.77               58.98 
+2                   2 No                                                    6,084       21,831,810.68               43.23               41.02 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOCRAFTS
+Position:   378
+Length:     1
+Label:      E42/H22. In the past week, time spent on arts and crafts
+
+Description:
+E42/H22. In the past week, has anyone in your family done the following things with this child? b. Done activities like arts and crafts, coloring, painting, pasting, or using clay
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   5,900       25,693,439.73               41.92               48.27 
+2                   2 No                                                    8,175       27,531,222.27               58.08               51.73 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOGAMES
+Position:   379
+Length:     1
+Label:      E42/H22. In the past week, played board games
+
+Description:
+E42/H22. In the past week, has anyone in your family done the following things with this child? c. Played board games or did puzzles with him/her
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   6,859       28,573,229.82               48.73               53.68 
+2                   2 No                                                    7,216       24,651,432.18               51.27               46.32 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOBUILDX
+Position:   380
+Length:     1
+Label:      E42/H22. In the past week, worked on a project
+
+Description:
+E42/H22. In the past week, has anyone in your family done the following things with this child? d. Worked on a project like building, making, or fixing something
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   8,017       30,748,212.16               56.96               57.77 
+2                   2 No                                                    6,058       22,476,449.84               43.04               42.23 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOSPORT
+Position:   381
+Length:     1
+Label:      E42/H22. In the past week, time spent playing sports
+
+Description:
+E42/H22. In the past week, has anyone in your family done the following things with this child? e. Played sports, active games, or exercised together
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                  10,319       41,315,583.38               73.31               77.62 
+2                   2 No                                                    3,756       11,909,078.62               26.69               22.38 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FORESPON
+Position:   382
+Length:     1
+Label:      E42/H22. In the past week, discussed time management
+
+Description:
+E42/H22. In the past week, has anyone in your family done the following things with this child? f. Discussed with him/her how to manage time
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   9,988       35,869,135.43               70.96               67.39 
+2                   2 No                                                    4,087       17,355,526.57               29.04               32.61 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOHISTX
+Position:   383
+Length:     1
+Label:      E42/H22. In the past week, discussed ethnic heritage
+
+Description:
+E42/H22. In the past week, has anyone in your family done the following things with this child? g. Talked with him/her about the family’s history or ethnic heritage
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   7,587       28,817,652.79               53.90               54.14 
+2                   2 No                                                    6,488       24,407,009.21               46.10               45.86 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOLIBRAYX
+Position:   385
+Length:     1
+Label:      E44/H24. Visited a library in the past month
+
+Description:
+E44/H24. In the past month, has anyone in your family done the following things with this child? a. Visited a library
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   4,760       18,661,719.84               33.82               35.06 
+2                   2 No                                                    9,315       34,562,942.16               66.18               64.94 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOBOOKSTX
+Position:   386
+Length:     1
+Label:      E44/H24. Visited a bookstore in the past month
+
+Description:
+E44/H24. In the past month, has anyone in your family done the following things with this child? b. Visited a bookstore
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   5,106       18,019,122.87               36.28               33.85 
+2                   2 No                                                    8,969       35,205,539.13               63.72               66.15 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOCONCRTX
+Position:   387
+Length:     1
+Label:      E44/H24. Gone to a play in the past month
+
+Description:
+E44/H24. In the past month, has anyone in your family done the following things with this child? c. Gone to a play, concert, or other live show
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   5,051       18,091,717.43               35.89               33.99 
+2                   2 No                                                    9,024       35,132,944.57               64.11               66.01 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOMUSEUMX
+Position:   388
+Length:     1
+Label:      E44/H24. Visited an art gallery in the past month
+
+Description:
+E44/H24. In the past month, has anyone in your family done the following things with this child? d. Visited an art gallery, museum, or historical site
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   3,704       13,846,480.33               26.32               26.02 
+2                   2 No                                                   10,371       39,378,181.68               73.68               73.98 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOZOOX
+Position:   389
+Length:     1
+Label:      E44/H24. Visited a zoo in the past month
+
+Description:
+E44/H24. In the past month, has anyone in your family done the following things with this child? e. Visited a zoo or aquarium
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   2,891       12,889,448.88               20.54               24.22 
+2                   2 No                                                   11,184       40,335,213.12               79.46               75.78 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOGROUPX
+Position:   390
+Length:     1
+Label:      E44/H24. Attended a religious event in the past month
+
+Description:
+E44/H24. In the past month, has anyone in your family done the following things with this child? f. Attended an event sponsored by a community, religious, or ethnic group
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   7,530       28,873,846.26               53.50               54.25 
+2                   2 No                                                    6,545       24,350,815.74               46.50               45.75 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       FOSPRTEVX
+Position:   391
+Length:     1
+Label:      E44/H24. Attended a sporting event in the past month
+
+Description:
+E44/H24. In the past month, has anyone in your family done the following things with this child? g. Attended an athletic or sporting event outside of school in which this child was not a player
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   5,732       22,197,907.74               40.72               41.71 
+2                   2 No                                                    8,343       31,026,754.26               59.28               58.29 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HHTOTALXX
+Position:   461
+Length:     2
+Label:      E65/H48. Total people in household
+
+Description:
+E65/H48. How many people live in this household?
+
+                                                                           Mean                           Std Deviation                     
+Category                            Min                 Max          Unweighted Weighted                     Unweighted Weighted            
+------------------- ------------------- ------------------- ------------------- ------------------- ------------------- ------------------- 
+—                                  2.00               10.00                4.05                4.58                1.25               91.71 
+
+— Indicates nonresponse for the entire instrument
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HWELFTAN
+Position:   576
+Length:     1
+Label:      E112/H89. Received TANF in past 12 months
+
+Description:
+E112/H89. In the past 12 months, did your family ever receive benefits from any of the following programs? Temporary Assistance for Needy Families, or TANF
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                     429        2,011,069.73                3.05                3.78 
+2                   2 No                                                   13,646       51,213,592.27               96.95               96.22 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HWELFST
+Position:   577
+Length:     1
+Label:      E112/H89. Received Welfare or family assistance in past 12 months
+
+Description:
+E112/H89. In the past 12 months, did your family ever receive benefits from any of the following programs? Your state welfare or family assistance program
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                     608        3,101,498.27                4.32                5.83 
+2                   2 No                                                   13,467       50,123,163.73               95.68               94.17 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HWIC
+Position:   578
+Length:     1
+Label:      E112/H89. Received WIC in past 12 months
+
+Description:
+E112/H89. In the past 12 months, did your family ever receive benefits from any of the following programs? Women, Infants, and Children, or WIC
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                     593        4,751,873.08                4.21                8.93 
+2                   2 No                                                   13,482       48,472,788.92               95.79               91.07 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HFOODST
+Position:   579
+Length:     1
+Label:      E112/H89. Received food stamps in past 12 months
+
+Description:
+E112/H89. In the past 12 months, did your family ever receive benefits from any of the following programs? Food Stamps
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   1,991       10,545,189.44               14.15               19.81 
+2                   2 No                                                   12,084       42,679,472.56               85.85               80.19 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HMEDICAID
+Position:   580
+Length:     1
+Label:      E112/H89. Received Medicaid in past 12 months
+
+Description:
+E112/H89. In the past 12 months, did your family ever receive benefits from any of the following programs? Medicaid
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   2,856       13,348,529.69               20.29               25.08 
+2                   2 No                                                   11,219       39,876,132.31               79.71               74.92 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HCHIP
+Position:   581
+Length:     1
+Label:      E112/H89. Received CHIP in past 12 months
+
+Description:
+E112/H89. In the past 12 months, did your family ever receive benefits from any of the following programs? Child Health Insurance Program (CHIP)
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                   1,249        5,667,792.85                8.87               10.65 
+2                   2 No                                                   12,826       47,556,869.16               91.13               89.35 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       HSECN8
+Position:   582
+Length:     1
+Label:      E112/H89. Received Section 8 in past 12 months
+
+Description:
+E112/H89. In the past 12 months, did your family ever receive benefits from any of the following programs? Section 8 housing assistance
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes                                                     452        2,295,097.91                3.21                4.31 
+2                   2 No                                                   13,623       50,929,564.09               96.79               95.69 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       TTLHHINC
+Position:   583
+Length:     2
+Label:      E113/H90. Total income
+
+Description:
+E113/H90. Which category best fits the total income of all persons in your household over the past 12 months?
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 $0 to $10,000                                           700        2,726,886.63                4.97                5.12 
+2                   2 $10,001 to $20,000                                      951        3,906,172.79                6.76                7.34 
+3                   3 $20,001 to $30,000                                    1,160        4,587,897.69                8.24                8.62 
+4                   4 $30,001 to $40,000                                    1,154        4,546,637.53                8.20                8.54 
+5                   5 $40,001 to $50,000                                      998        4,205,724.33                7.09                7.90 
+6                   6 $50,001 to $60,000                                      978        3,946,566.06                6.95                7.41 
+7                   7 $60,001 to $75,000                                    1,256        5,324,295.89                8.92               10.00 
+8                   8 $75,001 to $100,000                                   2,082        7,189,157.53               14.79               13.51 
+9                   9 $100,001 to $150,000                                  2,331        8,777,001.98               16.56               16.49 
+10                  10 $150,001 or more                                     2,465        8,014,321.57               17.51               15.06 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       OWNRNTHB
+Position:   587
+Length:     1
+Label:      E115/H92. Own/rent house
+
+Description:
+E115/H92. Is this house…
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Owned or being bought                                10,592       32,732,742.76               75.25               61.50 
+2                   2 Rented                                                3,203       19,597,943.08               22.76               36.82 
+3                   3 Occupied by some other arrangement                      280          893,976.16                1.99                1.68 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       RACEETHN
+Position:   620
+Length:     1
+Label:      D-Race and ethnicity of child
+
+Description:
+D-Race and ethnicity of child
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 White, non-Hispanic                                   7,980       26,792,023.15               56.70               50.34 
+2                   2 Black, non-Hispanic                                   1,386        7,300,575.45                9.85               13.72 
+3                   3 Hispanic                                              2,956       12,943,823.33               21.00               24.32 
+4                   4 All other races and multiple races, no                1,753        6,188,240.08               12.45               11.63 
+                    n-Hispanic
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       RACEETH2
+Position:   621
+Length:     1
+Label:      D-Detailed race and ethnicity of child
+
+Description:
+D-Detailed race and ethnicity of child
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 White, non-Hispanic                                   7,980       26,792,023.15               56.70               50.34 
+2                   2 Black, non-Hispanic                                   1,386        7,300,575.45                9.85               13.72 
+3                   3 Hispanic                                              2,956       12,943,823.33               21.00               24.32 
+4                   4 Asian or Pacific Islander, non-Hispani                  916        3,267,486.94                6.51                6.14 
+                    c
+5                   5 All other races and multiple races, no                  837        2,920,753.14                5.95                5.49 
+                    n-Hispanic
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+
+
+File:       pfi
+Name:       INTACC
+Position:   622
+Length:     1
+Label:      D-Internet access
+
+Description:
+D-Internet access
+
+                                                                        Frequency                                 Percent                     
+Category            Label                                              Unweighted Weighted                     Unweighted Weighted            
+------------------- ----------------------------------------- ------------------- ------------------- ------------------- ------------------- 
+1                   1 Yes, at home and on a cell phone                     12,472       46,326,567.95               88.61               87.04 
+2                   2 Yes, at home only                                       552        1,718,866.74                3.92                3.23 
+3                   3 Yes, on a cell phone only                               804        4,165,202.11                5.71                7.83 
+4                   4 No                                                      247        1,014,025.20                1.75                1.91 
+TOTAL                                                                      14,075       53,224,662.00              100.00              100.00 
+
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
