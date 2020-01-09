@@ -2,6 +2,7 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(survey)
+library(cluster)
 
 #loading R dataset
 #load("C:/Users/trbeverly/AppData/Local/Temp/Temp1_pfi_pu_pert_rdata.zip/pfi_pu_pert.rdata")
@@ -16,7 +17,7 @@ pinv <- select(pfi_pu_pert, c("basmid", "scpubpri", "sneighbrx", "sefuturex", "f
                               "chisprm", "csex", "hhtotalxx", "AGE2015", "HHPARN16X", "HHPARN16_BRD",
                               "numsibsx", "pargradex", "raceethn", "allgradex", "grade", "S16CHART", "S16PBPV",
                               "hhtotalxx", "relation", "hwelftan", "hwelfst", "hwic", 
-                              "hfoodst", "hmedicaid", "hchip", "HSECN8","RACEETH2", "ttlhhinc", "ownrnthb", "hvintcom"))
+                              "hfoodst", "hmedicaid", "hchip", "HSECN8","RACEETH2", "ttlhhinc", "ownrnthb", "hvintcom", "cblack"))
 
 #filtering by students enrolled in public and private students 
 pi <- pinv %>% 
@@ -29,7 +30,7 @@ recodedvars <- select(pi, c("basmid", "fssportx", "fsvol", "fsmtng", "fsptmtng",
                             "fscommte", "fscounslr", "FOSTORY2X","focrafts","fogames", "fobuildx", "fosport", 
                             "forespon", "fohistx", "folibrayx", "fobookstx", "foconcrtx", "fomuseumx", 
                             "fozoox", "fogroupx", "fosprtevx", "chispan", "camind", "casian", "cpaci",
-                            "cwhite"))
+                            "cwhite" , "cblack"))
 
 #Step 2 recode variables using reshape2 command
 fs = reshape2::dcast(
@@ -54,7 +55,7 @@ range
 
 # Create new datasets 
 parinv <- select(fs, c("basmid", "chispan", "camind", "casian", "cpaci",
-                       "cwhite", "FS", "FA"))
+                       "cwhite", "cblack", "FS", "FA"))
 explanatory <- select(pi, c("basmid", "allgradex", "hhtotalxx", "AGE2015", "pargradex",
                           "ttlhhinc", "fsfreq", "scpubpri", "sneighbrx", "sefuturex", "SSatis", "RACEETH2"))
 
@@ -90,10 +91,15 @@ mean(parental_involvement$fsfreq)
 
 #ggplot(data=parental_involvement)+ geom_bar(mapping=aes(x="FS"))
 
-fit <-lm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis + scpubpri + sneighbrx + sefuturex + RACEETH2, data=parental_involvement) 
+fit <-lm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis + scpubpri + sneighbrx + sefuturex + chispan + camind + casian +cpaci+ cwhite +cblack, data=parental_involvement) 
 summary(fit)
+plot(fit)
 
-posfit <- glm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis +scpubpri + sneighbrx + sefuturex + RACEETH2, data=parental_involvement, family = poisson())
-summary (posfit)
+posfit <- glm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis +scpubpri + sneighbrx + sefuturex + chispan + camind + casian +cpaci+ cwhite +cblack, data=parental_involvement, family = poisson())
+summary(posfit)
 coef(posfit)
-                                            
+plot(posfit)                                            
+#cluster analysis
+#agn1 <- agnes(parental_involvement, metric = "euclidean", stand = FALSE) 
+#agn1 
+#plot(agn1)
