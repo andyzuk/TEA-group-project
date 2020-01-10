@@ -1,11 +1,12 @@
 ---
-title: "**Factors Related to Parental Involvement in School**"
-subtitle: "Data Science Institute, American University"
+title: '**Factors Related to Parental Involvement in School**'
 author: "Tanesia Beverly, Andy Zukerberg, Erin Murrock"
 date: "1/11/2020"
-output: 
+output:
+  ioslides_presentation: default
   powerpoint_presentation:
     reference_doc: presentation1.pptx
+subtitle: Data Science Institute, American University
 ---
 
 ```{r setup, include=FALSE}
@@ -15,9 +16,9 @@ knitr::opts_chunk$set(echo = FALSE,
 
 ## **Parental Involvement In School** 
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Parent involvement is related to success of children in school
+- “The research overwhelmingly demonstrates that parent involvement in children's learning is positively related to achievement. Further, the research shows that the more intensively parents are involved in their children's learning, the more beneficial are the achievement effects. This holds true for all types of parent involvement in children's learning and for all types and ages of students.” (cotton and Reed, 1989)   
+
 
 ## **Study Purpose** 
 
@@ -27,20 +28,25 @@ knitr::opts_chunk$set(echo = FALSE,
 
 ## **PFI Questionnaire**
 
-- Bullet 1
-- Bullet 2
+- Parent and Family Involvement in Education
+- Conducted in 2016 by the National Center for Education Statistics
+- Collected every two or three years
+- 14,075 completed interviews
+- Parents respond about a selected child
+- Includes homeschooled and enrolled children
 
 ## **Research Questions and Hypotheses** 
 
-- Bullet 1
+- What are predictors of parent involvement in school?
 - Bullet 2
 - Bullet 3
 
 ## **Data Cleaning**
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Recoded data to remove valid skips 
+- Converted some variables to 0 for no and 1 for yes to facilitate counting
+- Removed homeschooled children
+
 
 ## **Participants/Demographics**
 
