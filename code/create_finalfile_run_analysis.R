@@ -3,7 +3,7 @@ library(ggplot2)
 library(psych)
 library(ltm)
 library(dplyr)
-library(gparotation)
+library(GPArotation)
 library(ggplot2)
 library(survey)
 library(cluster)
@@ -72,10 +72,10 @@ save(parinv, file = "parental_involvement.Rdata")
 cordata <- parinv[, c(9:13,17:19)]
 head(cordata, 3)
 
-iclust(cordata, nclusters = 2)
+#iclust(cordata, nclusters = 2)
 
-res <- cor(cordata)
-round(res, 2)
+#res <- cor(cordata)
+#round(res, 2)
 
 hist(as.matrix(cordata$hhtotalxx))
 heatmap(parinv[, c(9:13, 17:20)])
@@ -100,10 +100,20 @@ fit <-lm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis
 summary(fit)
 plot(fit)
 
+fit2 <-lm(FS ~ AGE2015 +  AGE2015 + pargradex + ttlhhinc + FA + SSatis + public + sefuturex, data=parinv) 
+summary(fit2)
+plot(fit2)
+
 posfit <- glm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis + public + sneighbrx + sefuturex, data=parinv, family = poisson())
 summary(posfit)
-coef(posfit)
+exp(coef(posfit))
 plot(posfit)                                            
+
+posfit2 <- glm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + FA + SSatis + public +  sefuturex, data=parinv, family = poisson())
+summary(posfit2)
+exp(coef(posfit2))
+plot(posfit2) 
+
 #cluster analysis
 #agn1 <- agnes(parental_involvement, metric = "euclidean", stand = FALSE) 
 #agn1 
