@@ -1,18 +1,19 @@
 ---
-title: "**Factors Related to Parental Involvement in School**"
-subtitle: "Data Science Institute, American University"
+title: '**Factors Related to Parental Involvement in School**'
 author: "Tanesia Beverly, Andy Zukerberg, Erin Murrock"
 date: "1/11/2020"
-output: 
-  powerpoint_presentation
+output:
+  ioslides_presentation: default
+  powerpoint_presentation: default
+subtitle: Data Science Institute, American University
 ---
 
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,
                       warning=FALSE, message=FALSE)
-setwd("C:/Users/trbeverly/Documents/")
-load("parental_involvement.Rdata")
+
+load("C:\\Users\\ANDY\\Documents\\GitHub\\TEA-group-project\\data\\parental_involvement.Rdata")
 
 ```
 
@@ -40,8 +41,7 @@ load("parental_involvement.Rdata")
 ## **Research Questions and Hypotheses** 
 
 - What are predictors of parent involvement in school?
-- Bullet 2
-- Bullet 3
+-
 
 ## **Data Cleaning**
 
@@ -53,9 +53,7 @@ load("parental_involvement.Rdata")
 
 ## **Participants/Demographics**
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+
 
 ## **Variables of Interest**
 Age2015= Age of child as of December 31st, 2015
@@ -86,14 +84,7 @@ FCSHOOL (satisfaction with school child attends, FCTEACHR (satisfaction with tea
 ## **Analysis**
 
 - Descriptive Statistics
-- Dimension Reduction (EFA)
 - Regression Analysis
-
-## **Results: Dimension Reduction**
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
 ## **Variables for regression, means, etc Descriptives**
 
@@ -130,7 +121,7 @@ Residual standard error: 1.524 on 13513 degrees of freedom
 Multiple R-squared:  0.2726,	Adjusted R-squared:  0.2721 
 F-statistic: 562.7 on 9 and 13513 DF,  p-value: < 2.2e-16
 
-## **REgression output
+## **Regression output
 \tiny
 ```{r echo = FALSE}
 
@@ -146,35 +137,17 @@ posfit <- glm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + S
 summary(posfit)
 ```
 
-##**Poisson Regression**
-Deviance Residuals: 
-    Min       1Q   Median       3Q      Max  
--3.4397  -0.5443   0.0289   0.5053   2.6498  
-Coefficients:
-             Estimate Std. Error z value Pr(>|z|)    
-(Intercept)  1.095827   0.038737  28.289   <2e-16 ***
-AGE2015     -0.016818   0.001307 -12.866   <2e-16 ***
-hhtotalxx    0.004260   0.003602   1.182    0.237    
-pargradex    0.051818   0.004926  10.520   <2e-16 ***
-ttlhhinc     0.022283   0.001959  11.372   <2e-16 ***
-FA           0.066241   0.002983  22.208   <2e-16 ***
-SSatis      -0.014556   0.001554  -9.367   <2e-16 ***
-public      -0.162918   0.012828 -12.700   <2e-16 ***
-sneighbrx    0.015885   0.011133   1.427    0.154    
-sefuturex    0.035777   0.004083   8.762   <2e-16 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-(Dispersion parameter for poisson family taken to be 1)
-    Null deviance: 13187  on 13522  degrees of freedom
-Residual deviance: 10243  on 13513  degrees of freedom
-AIC: 52140
-Number of Fisher Scoring iterations: 4
+
 
 ## **Discussion**
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- These factors will help you predict if parents will participate in school activities
+- These factors cluster into three constructs related to parental involvement in school
+- If the child goes to private school
+- If they engage in educational activities at home
+- Parent's level of education
+- Satisfaction with the school
+- Age of student negatively impacts
 
 ## **Future Implications**
 

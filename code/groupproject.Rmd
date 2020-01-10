@@ -1,20 +1,26 @@
 ---
 title: '**Factors Related to Parental Involvement in School**'
 author: '*Tanesia Beverly, Andrew Zukerberg, Erin Murrock*'
+fig_caption: yes
 output:
+  html_document:
+    df_print: paged
   pdf_document: default
   word_document: default
+geometry: margin=1in
 header-includes:
 - \usepackage{setspace}
 - \doublespacing
+indent: yes
+keywords: '*parental involvement, instrument development, regression analysis*'
 fontsize: 12pt
-abstract: \singlespacing 
-          Parental involvement in educational activities is thought to promote achievement outcomes. Twenty-seven items from the Parent and Family Involvement in Education (PFI) questionnaire were used to investigate the factors related to parental involvement in schools. An exploratory factor analysis was conducted to assess the dimensionality and reduce the number of items for the regression model. The EFA demonstrated that the items supported a three-factor structure. The reliabilities were above 0.70.  **ANDY PLACE THE FACTORS RELATED TO PARENTAL INVOLVEMENT**.
-          
-keywords: "*parental involvement, instrument development, regression analysis*"
-geometry: margin=1in
-fig_caption: yes
-indent: true
+abstract: \singlespacing Parental involvement in educational activities is thought
+  to promote achievement outcomes. Twenty-seven items from the Parent and Family Involvement
+  in Education (PFI) questionnaire were used to investigate the factors related to
+  parental involvement in schools. An exploratory factor analysis was conducted to
+  assess the dimensionality and reduce the number of items for the regression model.
+  The EFA demonstrated that the items supported a three-factor structure. The reliabilities
+  were above 0.70.  **ANDY PLACE THE FACTORS RELATED TO PARENTAL INVOLVEMENT**.
 ---
 
 ```{r setup, include=FALSE}

@@ -3,9 +3,9 @@ title: '**Factors Related to Parental Involvement in School**'
 author: '*Tanesia Beverly, Andrew Zukerberg, Erin Murrock*'
 fig_caption: yes
 output:
-  pdf_document: default
   html_document:
     df_print: paged
+  pdf_document: default
   word_document: default
 geometry: margin=1in
 header-includes:
@@ -20,22 +20,23 @@ abstract: \singlespacing Parental involvement in educational activities is thoug
   parental involvement in schools. An exploratory factor analysis was conducted to
   assess the dimensionality and reduce the number of items for the regression model.
   The EFA demonstrated that the items supported a three-factor structure. The reliabilities
-  were above 0.70.  **ANDY PLACE THE FACTORS RELATED TO PARENTAL INVOLVEMENT**.
+  were above 0.70.The factors related to parental involvement were attending private school,family activities at home, satisfaction with school and age.  
+  
 ---
 
-
-```{r setup, include=FALSE}
+```{r setup, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(ggplot2)
 library(psych)
 library(ltm)
 library(dplyr)
-library(captioner)
 
-setwd("C:/Users/trbeverly/Documents/")
-load("parental_involvement.Rdata")
+
+load("C:\\Users\\ANDY\\Documents\\GitHub\\TEA-group-project\\data\\parental_involvement.Rdata")
 ```
+\newline
+
 Literature spanning decades clearly shows that parental involvement at school and home has a positive impact on a child’s educational and physical development. Parental involvement can be divided into activities at home that support schooling and those that take place at school. In this project we will look at the factors that impact a parent’s participation directly in school activities. These activities include volunteering in the school, participating in a fundraiser, attending general school meetings (e.g. open house), attending Parent and Teacher Association (PTA) meetings, serving on a school committee, meeting with a guidance counselor, going to a regularly scheduled parent teacher conference or attending a school or class event (play, dance, sports). We will look at the role of parent involvement at home, income level, race/ethnicity, school type (public/private) and household size in predicting parent involvement in school activities and meetings attended.
 
 Numerous studies show the beneficial effects of parent involvement in their child’s education. For this reason, schools and organizations like the National PTA work to increase parent participation.  In reviewing the literature on parent involvement, Cotton and Reed concluded “The research overwhelmingly demonstrates that parent involvement in children's learning is positively related to achievement. Further, the research shows that the more intensively parents are involved in their children's learning, the more beneficial are the achievement effects. This holds true for all types of parent involvement in children's learning and for all types and ages of students.” Studies have demonstrated this impact in many subject areas and across different demographic groups (add cites) As a result of this strong evidence, The National PTA has developed a set of standards for engaging parents (see: https://s3.amazonaws.com/rdcms-pta/files/production/public/National_Standards_Implementation_Guide_2009.pdf). As part of the standards, schools are encouraged to find ways to involve parents in schools.  However, not all parents participate in their children’s education or participate in the same ways. In this report, we will look at the predictors of parents who participate in their child’s education. 
@@ -51,13 +52,23 @@ The purpose of this study is to investigate the demographic and social factors r
 
 ## ***Survey data and sample***
 
-The data came from the National Household Education Survey (NHES) conducted by the National Center for Education Statistics (NCES) in 2016. More specifically, the Parent and Family Involvement in Education (PFI) questionnaire. The PFI questionnaire is a nationally representative questionnaire that measures parental involvement in educational activities, including at home and school. Parents and guardians with children enrolled in grades K-12 are sampled. The 2016 sample size is 14,075. Our analysis focuses on a subset of the respondents who were not homeschooled. The final dataset consisted of 13,523 parents’ responses to survey questions and demographic information. The sample was mostly white (76%). **ADD OTHER DESCRIPTIVES RELATED TO SAMPLE DEMOGRAPHICS**. On average parents expects their children to earn a bachelor's degree. The median household income is between $60K and 70K. Parents have a bachelor's degree on average (median). 
+The data came from the National Household Education Survey (NHES) conducted by the National Center for Education Statistics (NCES) in 2016. More specifically, the Parent and Family Involvement in Education (PFI) questionnaire. The PFI questionnaire is a nationally representative questionnaire that measures parental involvement in educational activities, including at home and school. Parents and guardians with children enrolled in grades K-12 are sampled. The 2016 sample size is 14,075. Our analysis focuses on a subset of the respondents who were not homeschooled. The final dataset consisted of 13,523 parents’ responses to survey questions and demographic information. The sample was mostly white (76%). Parents had high expectations for their children' educational attainment, with . On average parents expects their children to earn a bachelor's degree. The median household income is between $60K and 70K. Parents have a bachelor's degree on average (median). 
+
+
+```{r echo=FALSE,error=FALSE, message=FALSE, warning=FALSE}
+vars <-describe(parinv[c(7:10, 13,17:20)])
+meaningful <- vars[c(3:4, 8:9)]
+meaningful[c(1:4, 9),]
+```
 
 
 |Parental Expectation  |  <HS | HS | TS | Assoc | BA/BS | Professional |
 |----------------------|:----:|----|----|-------|-------|--------------|
+|percent               |  1   |  9 |  8 |   15  |  29   |     39       |
+   
+|Parental Expectation  |  <HS | HS | TS | Assoc | BA/BS | Professional |
+|----------------------|:----:|----|----|-------|-------|--------------|
 |Value                 |   1  |  2 |  3 |   4   |   5   |       6      |
-|Observations          |      |    |    |       |       |              |
 
 ## ***Measures***
 
@@ -78,9 +89,37 @@ The EFA supported a 3-factor structure with 18 items. The items were chosen base
 Nine items were eliminated because they failed to meet a minimum criterion a simple structure. A simple structure is one in which the primary factor loading is greater than .30 (really .4), and no-cross loadings greater than 0.3. The factors were Since the items are related, we can create three subscales, parental involvement in school-based activities, parental involvement in educational activities at homes, and satisfaction with school. The school satisfaction factor has 5 items ($\alpha$ = .90), the parent support at school factor has 7 items ($\alpha$ = .74) and the family support at home has 6 items ($\alpha$ = .71). For the purposes of research an alpha value of 0.70 is good. Composite scores or summed score will be created for these three subscales for use in subsequent analyses. 
 
 ## ***Descriptive Analysis (Correlations and Such)***
-add stuff here.
+Parents indicated that they participated in approximately 4 different types of activities on average.
+```{r}
+meaningful <- vars[c(3:4, 8:9)]
+meaningful[c(5:8),]
+```
+We also looked at correlations:
+```{r}
+correl <-corr.test(parinv[17:20], y =NULL, use="pairwise", adjust="holm", alpha=.05)
+correl$r
+```
+This shows that there is a correlation between family activities and participation in school.  
 
 ## **Regression Analysis**
-add stuff here. 
+We ran two regression models.  The first model using regular regression produced the following outcome:
 
-# **Discussion and Conclusions**
+```{r echo = FALSE}
+
+fit <-lm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis + public + sneighbrx + sefuturex, data=parinv) 
+
+summary(fit)
+
+```
+
+## **Poisson Regression**
+
+```{r echo=FALSE}
+posfit <- glm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis + public + sneighbrx + sefuturex, data=parinv, family = poisson())
+summary(posfit)
+```
+This regression confirmed the findings in the regular regression.  In this model, household size and moving to the neightborhood for the school were not significantly related to participation in school activities.
+
+## **Discussion and Conclusions**
+We looked at factors that predict parent participation in activities at school.  We found that family activities at home, choosing a private school, and parent's level of education were the largest predictors of how involved a parent is at school.  Age is negatively related.  
+

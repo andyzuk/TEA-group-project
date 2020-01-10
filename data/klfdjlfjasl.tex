@@ -1,0 +1,254 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Untitled},
+  pdfauthor={andy zukerberg},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Untitled}
+\author{andy zukerberg}
+\date{1/10/2020}
+
+\begin{document}
+\maketitle
+
+Literature spanning decades clearly shows that parental involvement at
+school and home has a positive impact on a child's educational and
+physical development. Parental involvement can be divided into
+activities at home that support schooling and those that take place at
+school. In this project we will look at the factors that impact a
+parent's participation directly in school activities. These activities
+include volunteering in the school, participating in a fundraiser,
+attending general school meetings (e.g.~open house), attending Parent
+and Teacher Association (PTA) meetings, serving on a school committee,
+meeting with a guidance counselor, going to a regularly scheduled parent
+teacher conference or attending a school or class event (play, dance,
+sports). We will look at the role of parent involvement at home, income
+level, race/ethnicity, school type (public/private) and household size
+in predicting parent involvement in school activities and meetings
+attended.
+
+Numerous studies show the beneficial effects of parent involvement in
+their child's education. For this reason, schools and organizations like
+the National PTA work to increase parent participation. In reviewing the
+literature on parent involvement, Cotton and Reed concluded ``The
+research overwhelmingly demonstrates that parent involvement in
+children's learning is positively related to achievement. Further, the
+research shows that the more intensively parents are involved in their
+children's learning, the more beneficial are the achievement effects.
+This holds true for all types of parent involvement in children's
+learning and for all types and ages of students.'' Studies have
+demonstrated this impact in many subject areas and across different
+demographic groups (add cites) As a result of this strong evidence, The
+National PTA has developed a set of standards for engaging parents (see:
+\url{https://s3.amazonaws.com/rdcms-pta/files/production/public/National_Standards_Implementation_Guide_2009.pdf}).
+As part of the standards, schools are encouraged to find ways to involve
+parents in schools. However, not all parents participate in their
+children's education or participate in the same ways. In this report, we
+will look at the predictors of parents who participate in their child's
+education.
+
+\hypertarget{methodology}{%
+\section{\texorpdfstring{\textbf{Methodology}}{Methodology}}\label{methodology}}
+
+\hypertarget{research-questions}{%
+\subsection{\texorpdfstring{\textbf{\emph{Research
+Questions}}}{Research Questions}}\label{research-questions}}
+
+The purpose of this study is to investigate the demographic and social
+factors related to parental involvement in schools. We believe that
+certain demographic variables such as parental education, income, and
+school satisfaction have a positive relationship with parental
+involvement in school-based activities while student age has a negative
+relationship. Our research questions are as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Are the questions related to parental involvement of educational
+  activities at home and school unidimensional? If not, what is the
+  internal structure of these items?
+\item
+  What factors are related to parental involvement in school-based
+  activities?
+\end{enumerate}
+
+\hypertarget{survey-data-and-sample}{%
+\subsection{\texorpdfstring{\textbf{\emph{Survey data and
+sample}}}{Survey data and sample}}\label{survey-data-and-sample}}
+
+The data came from the National Household Education Survey (NHES)
+conducted by the National Center for Education Statistics (NCES) in
+2016. More specifically, the Parent and Family Involvement in Education
+(PFI) questionnaire. The PFI questionnaire is a nationally
+representative questionnaire that measures parental involvement in
+educational activities, including at home and school. Parents and
+guardians with children enrolled in grades K-12 are sampled. The 2016
+sample size is 14,075. Our analysis focuses on a subset of the
+respondents who were not homeschooled. The final dataset consisted of
+13,523 parents' responses to survey questions and demographic
+information. The sample was mostly white (76\%). \textbf{ADD OTHER
+DESCRIPTIVES RELATED TO SAMPLE DEMOGRAPHICS}. On average parents expects
+their children to earn a bachelor's degree. The median household income
+is between \$60K and 70K. Parents have a bachelor's degree on average
+(median).
+
+\begin{longtable}[]{@{}lclllll@{}}
+\toprule
+Parental Expectation & \textless HS & HS & TS & Assoc & BA/BS &
+Professional\tabularnewline
+\midrule
+\endhead
+Value & 1 & 2 & 3 & 4 & 5 & 6\tabularnewline
+Observations & & & & & &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{measures}{%
+\subsection{\texorpdfstring{\textbf{\emph{Measures}}}{Measures}}\label{measures}}
+
+Two major constructs utilized for this study were parents' satisfaction
+with the school their child attended and parental involvement in
+educational activities at school and home. Parent involvement in school
+was measured using 8 dichotomous (yes/no) items. School Satisfaction was
+measured using 5 items from the same survey. Parents were asked to rate
+their overall satisfaction with the school their child(ren) were
+enrolled using a 4-point Likert scale (1: not satisfied - 4 highly
+satisfied). These items were 4 category Likert Scale. Educational
+support was measured by several dichotomous items related to parental
+involvement at school and home.
+
+\hypertarget{analysis}{%
+\subsection{\texorpdfstring{\textbf{\emph{Analysis}}}{Analysis}}\label{analysis}}
+
+Several analyses will be conducted to answer the research questions.
+There were 27 items used to measure parental support of educational
+development at school and home and parents' satisfaction with school on
+the PFI. We hypothesized that these 27 items represented three factors,
+school satisfaction, parental involvement at school, and parental
+involvement in educational related activities at home. To determine
+which items were similar, we conducted an exploratory factor analysis
+(EFA) with maximum likelihood to determine the internal structure.
+Therefore, the EFA will address the first research question. This
+research question will help to determine which items can be considered a
+scale for the regression analysis. Second, descriptive analyses will be
+conducted to describe the data, once the scales have been created. Last,
+a multiple regression model will be conducted to help explain the
+factors related to parental involvement school-based activities.
+
+\hypertarget{results}{%
+\section{\texorpdfstring{\textbf{Results}}{Results}}\label{results}}
+
+add stuff here
+
+\hypertarget{exploratory-factor-analysis}{%
+\subsection{\texorpdfstring{\textbf{\emph{Exploratory Factor
+Analysis}}}{Exploratory Factor Analysis}}\label{exploratory-factor-analysis}}
+
+The EFA supported a 3-factor structure with 18 items. The items were
+chosen based on their factor loading. If they had a factor loading
+greater than 0.30 then it was considered related. A fair number of items
+have low communalities, indicating their they do not share much variance
+with other items on the questionnaire. However, many of the factor
+loadings, strength of the relationship between the factor and item were
+greater than the cutoff. The fit statistics, the Tucker Lewis Index,
+RMSEA, were appropriate to suggest good fit. The three-factor solution
+explained 88\% of the variance between the items. Therefore, the factor
+analysis was deemed to be suitable.
+
+Nine items were eliminated because they failed to meet a minimum
+criterion a simple structure. A simple structure is one in which the
+primary factor loading is greater than .30 (really .4), and no-cross
+loadings greater than 0.3. The factors were Since the items are related,
+we can create three subscales, parental involvement in school-based
+activities, parental involvement in educational activities at homes, and
+satisfaction with school. The school satisfaction factor has 5 items
+(\(\alpha\) = .90), the parent support at school factor has 7 items
+(\(\alpha\) = .74) and the family support at home has 6 items
+(\(\alpha\) = .71). For the purposes of research an alpha value of 0.70
+is good. Composite scores or summed score will be created for these
+three subscales for use in subsequent analyses.
+
+\hypertarget{descriptive-analysis-correlations-and-such}{%
+\subsection{\texorpdfstring{\textbf{\emph{Descriptive Analysis
+(Correlations and
+Such)}}}{Descriptive Analysis (Correlations and Such)}}\label{descriptive-analysis-correlations-and-such}}
+
+add stuff here.
+
+\hypertarget{regression-analysis}{%
+\subsection{\texorpdfstring{\textbf{Regression
+Analysis}}{Regression Analysis}}\label{regression-analysis}}
+
+add stuff here.
+
+\hypertarget{discussion-and-conclusions}{%
+\section{\texorpdfstring{\textbf{Discussion and
+Conclusions}}{Discussion and Conclusions}}\label{discussion-and-conclusions}}
+
+\end{document}

@@ -1,0 +1,70 @@
+---
+title: "Untitled"
+author: "andy zukerberg"
+date: "1/10/2020"
+output:
+  html_document:
+    df_print: paged
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(ggplot2)
+library(psych)
+library(ltm)
+library(dplyr)
+library(captioner)
+
+load("C:\\Users\\ANDY\\Documents\\GitHub\\TEA-group-project\\data\\parental_involvement.Rdata")
+
+```
+Literature spanning decades clearly shows that parental involvement at school and home has a positive impact on a child’s educational and physical development. Parental involvement can be divided into activities at home that support schooling and those that take place at school. In this project we will look at the factors that impact a parent’s participation directly in school activities. These activities include volunteering in the school, participating in a fundraiser, attending general school meetings (e.g. open house), attending Parent and Teacher Association (PTA) meetings, serving on a school committee, meeting with a guidance counselor, going to a regularly scheduled parent teacher conference or attending a school or class event (play, dance, sports). We will look at the role of parent involvement at home, income level, race/ethnicity, school type (public/private) and household size in predicting parent involvement in school activities and meetings attended.
+
+Numerous studies show the beneficial effects of parent involvement in their child’s education. For this reason, schools and organizations like the National PTA work to increase parent participation.  In reviewing the literature on parent involvement, Cotton and Reed concluded “The research overwhelmingly demonstrates that parent involvement in children's learning is positively related to achievement. Further, the research shows that the more intensively parents are involved in their children's learning, the more beneficial are the achievement effects. This holds true for all types of parent involvement in children's learning and for all types and ages of students.” Studies have demonstrated this impact in many subject areas and across different demographic groups (add cites) As a result of this strong evidence, The National PTA has developed a set of standards for engaging parents (see: https://s3.amazonaws.com/rdcms-pta/files/production/public/National_Standards_Implementation_Guide_2009.pdf). As part of the standards, schools are encouraged to find ways to involve parents in schools.  However, not all parents participate in their children’s education or participate in the same ways. In this report, we will look at the predictors of parents who participate in their child’s education. 
+
+# **Methodology**
+
+## ***Research Questions***
+
+The purpose of this study is to investigate the demographic and social factors related to parental involvement in schools. We believe that certain demographic variables such as parental education, income, and school satisfaction have a positive relationship with parental involvement in school-based activities while student age has a negative relationship. Our research questions are as follows:
+
+1. Are the questions related to parental involvement of educational activities at home and school unidimensional? If not, what is the internal structure of these items?
+2. What factors are related to parental involvement in school-based activities? 
+
+## ***Survey data and sample***
+
+The data came from the National Household Education Survey (NHES) conducted by the National Center for Education Statistics (NCES) in 2016. More specifically, the Parent and Family Involvement in Education (PFI) questionnaire. The PFI questionnaire is a nationally representative questionnaire that measures parental involvement in educational activities, including at home and school. Parents and guardians with children enrolled in grades K-12 are sampled. The 2016 sample size is 14,075. Our analysis focuses on a subset of the respondents who were not homeschooled. The final dataset consisted of 13,523 parents’ responses to survey questions and demographic information. The sample was mostly white (76%). **ADD OTHER DESCRIPTIVES RELATED TO SAMPLE DEMOGRAPHICS**. On average parents expects their children to earn a bachelor's degree. The median household income is between $60K and 70K. Parents have a bachelor's degree on average (median). 
+
+
+|Parental Expectation  |  <HS | HS | TS | Assoc | BA/BS | Professional |
+|----------------------|:----:|----|----|-------|-------|--------------|
+|Value                 |   1  |  2 |  3 |   4   |   5   |       6      |
+|Observations          |      |    |    |       |       |              |
+
+## ***Measures***
+
+Two major constructs utilized for this study were parents' satisfaction with the school their child attended and parental involvement in educational activities at school and home. Parent involvement in school was measured using 8 dichotomous (yes/no) items. School Satisfaction was measured using 5 items from the same survey. Parents were asked to rate their overall satisfaction with the school their child(ren) were enrolled using a 4-point Likert scale (1: not satisfied - 4 highly satisfied). These items were 4 category Likert Scale. Educational support was measured by several dichotomous items related to parental involvement at school and home.
+
+## ***Analysis***
+
+Several analyses will be conducted to answer the research questions. There were 27 items used to measure parental support of educational development at school and home and parents' satisfaction with school on the PFI. We hypothesized that these 27 items represented three factors, school satisfaction, parental involvement at school, and parental involvement in educational related activities at home. To determine which items were similar, we conducted an exploratory factor analysis (EFA) with maximum likelihood to determine the internal structure. Therefore, the EFA will address the first research question. This research question will help to determine which items can be considered a scale for the regression analysis. Second, descriptive analyses will be conducted to describe the data, once the scales have been created. Last, a multiple regression model will be conducted to help explain the factors related to parental involvement school-based activities. 
+
+# **Results**
+
+add stuff here
+
+## ***Exploratory Factor Analysis***
+
+The EFA supported a 3-factor structure with 18 items. The items were chosen based on their factor loading. If they had a factor loading greater than 0.30 then it was considered related. A fair number of items have low communalities, indicating their they do not share much variance with other items on the questionnaire. However, many of the factor loadings, strength of the relationship between the factor and item were greater than the cutoff. The fit statistics, the Tucker Lewis Index, RMSEA, were appropriate to suggest good fit. The three-factor solution explained 88% of the variance between the items. Therefore, the factor analysis was deemed to be suitable.
+
+Nine items were eliminated because they failed to meet a minimum criterion a simple structure. A simple structure is one in which the primary factor loading is greater than .30 (really .4), and no-cross loadings greater than 0.3. The factors were Since the items are related, we can create three subscales, parental involvement in school-based activities, parental involvement in educational activities at homes, and satisfaction with school. The school satisfaction factor has 5 items ($\alpha$ = .90), the parent support at school factor has 7 items ($\alpha$ = .74) and the family support at home has 6 items ($\alpha$ = .71). For the purposes of research an alpha value of 0.70 is good. Composite scores or summed score will be created for these three subscales for use in subsequent analyses. 
+
+## ***Descriptive Analysis (Correlations and Such)***
+add stuff here.
+
+## **Regression Analysis**
+add stuff here. 
+
+# **Discussion and Conclusions**
