@@ -55,12 +55,6 @@ knitr::opts_chunk$set(echo = FALSE,
 - Bullet 2
 - Bullet 3
 
-## **Analysis**
-
-- Descriptive Statistics
-- Dimension Reduction (EFA)
-- Regression Analysis
-
 ## **Variables of Interest**
 Age2015= Age of child as of December 31st, 2015
 
@@ -83,6 +77,24 @@ FOSTORY2X (told child a story past week), focrafts(did arts and crafts past week
 
 SSatis- satisfaction with school. Comprised of:
 FCSHOOL (satisfaction with school child attends, FCTEACHR (satisfaction with teachers), FCSTDS (satisfaction with academic standards), FCORDER (satisfaction with order and discipline at school), FCSUPPRT (satisfaction with way school interacts with parents
+
+## **Analysis**
+
+- Descriptive Statistics
+- Dimension Reduction (EFA)
+- Regression Analysis
+
+## **Results: Dimension Reduction**
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## **Variables for regression, means, etc Descriptives**
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
 
 ## **Outcome Variable**
 FS- count of school activities parent participated in. 
@@ -144,24 +156,6 @@ Number of Fisher Scoring iterations: 4
 (Intercept)     AGE2015   hhtotalxx   pargradex    ttlhhinc          FA      SSatis      public   sneighbrx   sefuturex 
   2.9916558   0.9833223   1.0042689   1.0531837   1.0225335   1.0684842   0.9855492   0.8496606   1.0160114   1.0364248 
 
-
-## **Results: Dimensionality Reduction**
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## **Predictor Descriptives**
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
-
-## **Prediction Model**
-
-- Bullet 1
-- Bullet 2
-- Bullet 3
 
 ## **Discussion**
 
