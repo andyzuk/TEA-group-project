@@ -109,14 +109,6 @@ Most students attended public school.  The mean household size was 4 and the ave
 - We were able to create three subscales, parental involvement in school-based activities, parental involvement in educational activities at homes, and satisfaction with school.  
 
 
-## **Descriptive Analysis (Correlations)**
-There were correlations between family activities and participation in school
-```{r}
-
-correl <-corr.test(parinv[17:20], y =NULL, use="pairwise", adjust="holm", alpha=.05)
-correl$r
-```
-
 
 ## **Family Activities Measure**
 
@@ -171,6 +163,19 @@ meaningful <- vars[c(3:4, 8:9)]
 meaningful[c(5:8),]
 ```
 Mean participation at school was 4 discrete activities
+
+
+## **Descriptive Analysis (Correlations)**
+There were correlations between family activities and participation in school
+```{r}
+
+correl <-corr.test(parinv[17:20], y =NULL, use="pairwise", adjust="holm", alpha=.05)
+correl$r
+```
+
+
+
+
 
 ## **Multiple Regression Model**
 
