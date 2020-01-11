@@ -7,7 +7,7 @@ library(GPArotation)
 library(ggplot2)
 library(survey)
 library(cluster)
-
+library(gmodels)
 #load("C:/Users/trbeverly/AppData/Local/Temp/Temp1_pfi_pu_pert_rdata.zip/pfi_pu_pert.rdata")
 
 
@@ -91,8 +91,26 @@ ggplot(parinv, aes(AGE2015, fill=..count..)) +
   
 colnames(parinv)
 
+#some descriptive statistics
+# 2-Way Cross Tabulation
+
+ctabs <- CrossTable(parinv$FS, parinv$AGE2015, digits = 2, , prop.r = TRUE, prop.c = TRUE)
+ctabs <- CrossTable(parinv$FS, parinv$RACEETH2, digits = 2, , prop.r = TRUE, prop.c = TRUE)
+
+tblFun <- function(x){
+  tbl <- table(x)
+  res <- cbind(tbl,round(prop.table(tbl)*100,2))
+  colnames(res) <- c('Count','Percentage')
+  
+  res
+}
 
 
+do.call(rbind,lapply(newdf[5:12],tblFun))
+table(parinv$sneighbrx)
+table(parinv$allgradex)
+table(parinv$hhtotalxx)
+table(parinv$sefuturex)
 
 #create regression models
 
@@ -119,5 +137,7 @@ plot(posfit2)
 #agn1 
 #plot(agn1)
 
+
+describe(parinv[2:19])
 
 

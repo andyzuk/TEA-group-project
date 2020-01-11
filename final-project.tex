@@ -34,6 +34,55 @@
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -68,9 +117,336 @@ investigate the factors related to parental involvement in schools. An
 exploratory factor analysis was conducted to assess the dimensionality
 and reduce the number of items for the regression model. The EFA
 demonstrated that the items supported a three-factor structure. The
-reliabilities were above 0.70.
+reliabilities were above 0.70.The factors related to parental
+involvement were attending private school,family activities at home,
+satisfaction with school and age.
 \end{abstract}
 
+\newline
 
+Literature spanning decades clearly shows that parental involvement at
+school and home has a positive impact on a child's educational and
+physical development. Parental involvement can be divided into
+activities at home that support schooling and those that take place at
+school. In this project we will look at the factors that impact a
+parent's participation directly in school activities. These activities
+include volunteering in the school, participating in a fundraiser,
+attending general school meetings (e.g.~open house), attending Parent
+and Teacher Association (PTA) meetings, serving on a school committee,
+meeting with a guidance counselor, going to a regularly scheduled parent
+teacher conference or attending a school or class event (play, dance,
+sports). We will look at the role of parent involvement at home, income
+level, race/ethnicity, school type (public/private) and household size
+in predicting parent involvement in school activities and meetings
+attended.
+
+Numerous studies show the beneficial effects of parent involvement in
+their child's education. For this reason, schools and organizations like
+the National PTA work to increase parent participation. In reviewing the
+literature on parent involvement, Cotton and Reed concluded ``The
+research overwhelmingly demonstrates that parent involvement in
+children's learning is positively related to achievement. Further, the
+research shows that the more intensively parents are involved in their
+children's learning, the more beneficial are the achievement effects.
+This holds true for all types of parent involvement in children's
+learning and for all types and ages of students.'' Studies have
+demonstrated this impact in many subject areas and across different
+demographic groups (see Schmuw et. al.~2014 and Wang et. al.~(2014) for
+examples). As a result of this strong evidence, The National PTA has
+developed a set of standards for engaging parents (see:
+\url{https://s3.amazonaws.com/rdcms-pta/files/production/public/National_Standards_Implementation_Guide_2009.pdf}).
+As part of the standards, schools are encouraged to find ways to involve
+parents in schools. However, not all parents participate in their
+children's education or participate in the same ways. In this report, we
+will look at the predictors of parents who participate in their child's
+education.
+
+\hypertarget{research-questions}{%
+\subsection{\texorpdfstring{\textbf{\emph{Research
+Questions}}}{Research Questions}}\label{research-questions}}
+
+The purpose of this study is to investigate the demographic and social
+factors related to parental involvement in schools. We believe that
+certain demographic variables such as parental education, income, and
+school satisfaction have a positive relationship with parental
+involvement in school-based activities while student age has a negative
+relationship. Our research questions are as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Are the questions related to parental involvement of educational
+  activities at home and school unidimensional? If not, what is the
+  internal structure of these items?
+\item
+  What factors are related to parental involvement in school-based
+  activities?
+\end{enumerate}
+
+\hypertarget{survey-data-and-sample}{%
+\subsection{\texorpdfstring{\textbf{\emph{Survey data and
+sample}}}{Survey data and sample}}\label{survey-data-and-sample}}
+
+The data came from the National Household Education Survey (NHES)
+conducted by the National Center for Education Statistics (NCES) in
+2016. More specifically, the Parent and Family Involvement in Education
+(PFI) questionnaire. The PFI questionnaire is a nationally
+representative questionnaire that measures parental involvement in
+educational activities, including at home and school. Parents and
+guardians with children in grades K-12 are sampled. The 2016 sample size
+is 14,075. Our analysis focuses on a subset of the respondents who were
+not homeschooled. The final dataset consisted of 13,523 parents'
+responses to survey questions and demographic information. The sample
+was mostly white (76\%). Parents had high expectations for their
+children's educational attainment, with 39 percent reporting that they
+expect their child to earn a graduate or professional degree. On average
+parents expects their children to earn a bachelor's degree. The median
+household income is between \$60K and 70K. Parents have a bachelor's
+degree on average (median).
+
+\begin{verbatim}
+##             mean   sd min max
+## sneighbrx   0.18 0.39   0   1
+## allgradex*  7.13 3.44   1  12
+## hhtotalxx   4.03 1.22   2  10
+## AGE2015    12.05 3.79   3  20
+## public      0.89 0.32   0   1
+\end{verbatim}
+
+\begin{longtable}[]{@{}lclllll@{}}
+\toprule
+Parental Expectation & \textless HS & HS & TS & Assoc & BA/BS &
+Professional\tabularnewline
+\midrule
+\endhead
+percent & 1 & 9 & 8 & 15 & 29 & 39\tabularnewline
+\bottomrule
+\end{longtable}
+
+\textbar family activity \textbar{} visited \textbar{} visited
+\textbar{} live event \textbar{} museum \textbar{} zoo \textbar{}
+community event \textbar{} Athletic \textbar{} \textbar{} \textbar{}
+library \textbar{} bookstore \textbar{} or play \textbar{} hist.
+\textbar{} aqu.\textbar{} religous/ethnic \textbar{} event \textbar{}
+\textbar-----------------\textbar:-------:\textbar-----------\textbar------------\textbar--------\textbar-----\textbar-----------------\textbar----------\textbar{}
+\textbar Value \textbar{} 34 \textbar{} 34 \textbar{} 34 \textbar{} 25
+\textbar{} 24\textbar{} 54 \textbar{} 42 \textbar{}
+
+\hypertarget{measures}{%
+\subsection{\texorpdfstring{\textbf{\emph{Measures}}}{Measures}}\label{measures}}
+
+Two major constructs utilized for this study were parents' satisfaction
+with the school their child attended and parental involvement in
+educational activities at school and home. Parent involvement in school
+was measured using 8 dichotomous (yes/no) items. School Satisfaction was
+measured using 5 items from the same survey. Parents were asked to rate
+their overall satisfaction with the school their child(ren) were
+enrolled using a 4-point Likert scale (1: not satisfied - 4 highly
+satisfied). These items were 4 category Likert Scale. Educational
+support was measured by several dichotomous items related to parental
+involvement at school and home.
+
+\hypertarget{analysis}{%
+\subsection{\texorpdfstring{\textbf{\emph{Analysis}}}{Analysis}}\label{analysis}}
+
+Several analyses will be conducted to answer the research questions.
+There were 27 items used to measure parental support of educational
+development at school and home and parents' satisfaction with school on
+the PFI. We hypothesized that these 27 items represented three factors,
+school satisfaction, parental involvement at school, and parental
+involvement in educational related activities at home. To determine
+which items were similar, we conducted an exploratory factor analysis
+(EFA) with maximum likelihood to determine the internal structure.
+Therefore, the EFA will address the first research question. This
+research question will help to determine which items can be considered a
+scale for the regression analysis. Second, descriptive analyses will be
+conducted to describe the data, once the scales have been created. Last,
+a multiple regression model will be conducted to help explain the
+factors related to parental involvement school-based activities.
+
+\hypertarget{results}{%
+\section{\texorpdfstring{\textbf{Results}}{Results}}\label{results}}
+
+add stuff here
+
+\hypertarget{exploratory-factor-analysis}{%
+\subsection{\texorpdfstring{\textbf{\emph{Exploratory Factor
+Analysis}}}{Exploratory Factor Analysis}}\label{exploratory-factor-analysis}}
+
+The EFA supported a 3-factor structure with 18 items. The items were
+chosen based on their factor loading. If they had a factor loading
+greater than 0.30 then it was considered related. A fair number of items
+have low communalities, indicating their they do not share much variance
+with other items on the questionnaire. However, many of the factor
+loadings, strength of the relationship between the factor and item were
+greater than the cutoff. The fit statistics, the Tucker Lewis Index,
+RMSEA, were appropriate to suggest good fit. The three-factor solution
+explained 88\% of the variance between the items. Therefore, the factor
+analysis was deemed to be suitable.
+
+Nine items were eliminated because they failed to meet a minimum
+criterion a simple structure. A simple structure is one in which the
+primary factor loading is greater than .30 (really .4), and no-cross
+loadings greater than 0.3. The factors were Since the items are related,
+we can create three subscales, parental involvement in school-based
+activities, parental involvement in educational activities at homes, and
+satisfaction with school. The school satisfaction factor has 5 items
+(\(\alpha\) = .90), the parent support at school factor has 7 items
+(\(\alpha\) = .74) and the family support at home has 6 items
+(\(\alpha\) = .71). For the purposes of research an alpha value of 0.70
+is good. Composite scores or summed score will be created for these
+three subscales for use in subsequent analyses.
+
+\hypertarget{descriptive-analysis-correlations-and-such}{%
+\subsection{\texorpdfstring{\textbf{\emph{Descriptive Analysis
+(Correlations and
+Such)}}}{Descriptive Analysis (Correlations and Such)}}\label{descriptive-analysis-correlations-and-such}}
+
+Parents indicated that they participated in approximately 4 different
+types of activities on average.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{meaningful <-}\StringTok{ }\NormalTok{vars[}\KeywordTok{c}\NormalTok{(}\DecValTok{3}\OperatorTok{:}\DecValTok{4}\NormalTok{, }\DecValTok{8}\OperatorTok{:}\DecValTok{9}\NormalTok{)]}
+\NormalTok{meaningful[}\KeywordTok{c}\NormalTok{(}\DecValTok{5}\OperatorTok{:}\DecValTok{8}\NormalTok{),]}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##        mean   sd min max
+## fsfreq 7.92 8.99   0  99
+## FS     4.01 1.79   0   7
+## FA     2.96 1.69   0   6
+## SSatis 7.65 3.01   5  20
+\end{verbatim}
+
+We also looked at correlations:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{correl <-}\KeywordTok{corr.test}\NormalTok{(parinv[}\DecValTok{17}\OperatorTok{:}\DecValTok{20}\NormalTok{], }\DataTypeTok{y =}\OtherTok{NULL}\NormalTok{, }\DataTypeTok{use=}\StringTok{"pairwise"}\NormalTok{, }\DataTypeTok{adjust=}\StringTok{"holm"}\NormalTok{, }\DataTypeTok{alpha=}\NormalTok{.}\DecValTok{05}\NormalTok{)}
+\NormalTok{correl}\OperatorTok{$}\NormalTok{r}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                FS          FA     SSatis      public
+## FS      1.0000000  0.34527862 -0.2010948 -0.20784771
+## FA      0.3452786  1.00000000 -0.1031395 -0.01757768
+## SSatis -0.2010948 -0.10313951  1.0000000  0.14404284
+## public -0.2078477 -0.01757768  0.1440428  1.00000000
+\end{verbatim}
+
+This shows that there is a correlation between family activities and
+participation in school.
+
+\hypertarget{regression-analysis}{%
+\subsection{\texorpdfstring{\textbf{Regression
+Analysis}}{Regression Analysis}}\label{regression-analysis}}
+
+We ran two regression models. The first model using regular regression
+produced the following outcome:
+
+\begin{verbatim}
+## 
+## Call:
+## lm(formula = FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + 
+##     ttlhhinc + FA + SSatis + public + sneighbrx + sefuturex, 
+##     data = parinv)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.7709 -1.0177  0.0583  1.0501  5.4114 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  3.224210   0.116115  27.767   <2e-16 ***
+## AGE2015     -0.070933   0.004016 -17.662   <2e-16 ***
+## hhtotalxx    0.011937   0.010832   1.102   0.2705    
+## pargradex    0.199829   0.014607  13.680   <2e-16 ***
+## ttlhhinc     0.087108   0.005825  14.955   <2e-16 ***
+## FA           0.260147   0.008965  29.018   <2e-16 ***
+## SSatis      -0.054204   0.004512 -12.013   <2e-16 ***
+## public      -0.768399   0.042936 -17.896   <2e-16 ***
+## sneighbrx    0.073768   0.034558   2.135   0.0328 *  
+## sefuturex    0.125544   0.011685  10.744   <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.524 on 13513 degrees of freedom
+## Multiple R-squared:  0.2726, Adjusted R-squared:  0.2721 
+## F-statistic: 562.7 on 9 and 13513 DF,  p-value: < 2.2e-16
+\end{verbatim}
+
+\hypertarget{poisson-regression}{%
+\subsection{\texorpdfstring{\textbf{Poisson
+Regression}}{Poisson Regression}}\label{poisson-regression}}
+
+\begin{verbatim}
+## 
+## Call:
+## glm(formula = FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + 
+##     ttlhhinc + FA + SSatis + public + sneighbrx + sefuturex, 
+##     family = poisson(), data = parinv)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -3.4397  -0.5443   0.0289   0.5053   2.6498  
+## 
+## Coefficients:
+##              Estimate Std. Error z value Pr(>|z|)    
+## (Intercept)  1.095827   0.038737  28.289   <2e-16 ***
+## AGE2015     -0.016818   0.001307 -12.866   <2e-16 ***
+## hhtotalxx    0.004260   0.003602   1.182    0.237    
+## pargradex    0.051818   0.004926  10.520   <2e-16 ***
+## ttlhhinc     0.022283   0.001959  11.372   <2e-16 ***
+## FA           0.066241   0.002983  22.208   <2e-16 ***
+## SSatis      -0.014556   0.001554  -9.367   <2e-16 ***
+## public      -0.162918   0.012828 -12.700   <2e-16 ***
+## sneighbrx    0.015885   0.011133   1.427    0.154    
+## sefuturex    0.035777   0.004083   8.762   <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for poisson family taken to be 1)
+## 
+##     Null deviance: 13187  on 13522  degrees of freedom
+## Residual deviance: 10243  on 13513  degrees of freedom
+## AIC: 52140
+## 
+## Number of Fisher Scoring iterations: 4
+\end{verbatim}
+
+This regression confirmed the findings in the regular regression. In
+this model, household size and moving to the neightborhood for the
+school were not significantly related to participation in school
+activities.
+
+\hypertarget{discussion-and-conclusions}{%
+\subsection{\texorpdfstring{\textbf{Discussion and
+Conclusions}}{Discussion and Conclusions}}\label{discussion-and-conclusions}}
+
+We looked at factors that predict parent participation in activities at
+school. We found that family activities at home, choosing a private
+school, and parent's level of education were the largest predictors of
+how involved a parent is at school. Age is negatively related.
+
+\hypertarget{citations}{%
+\subsection{\texorpdfstring{\textbf{Citations}}{Citations}}\label{citations}}
+
+Cotton, Kathleen and Karen Reed Wikelund (1989). ``Parent Involvement in
+Education'' School Improvement Research Series: Close up \# 6. (1989)
+Accessed from:
+\url{http://educationnorthwest.org/sites/default/files/parent-involvement-in-education.pdf}
+
+Shumow, L., \& Schmidt, J. A. (2014). Parent engagement in science with
+ninth graders and with students in higher grades. School Community
+Journal, 24(1), 17-36. Retrieved from
+\url{http://files.eric.ed.gov/fulltext/EJ1032238.pdf}
+
+Wang, M., \& Sheikh-Khalil, S. (2014). Does parental involvement matter
+for student achievement and mental health in high school? Child
+Development, 85(2), 610-625. \url{doi:10.1111/cdev.12153}
 
 \end{document}

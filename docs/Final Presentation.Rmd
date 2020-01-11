@@ -1,0 +1,210 @@
+---
+title: '**Factors Related to Parental Involvement in School**'
+author: "Tanesia Beverly, Andy Zukerberg, Erin Murrock"
+date: "1/11/2020"
+output:
+  ioslides_presentation: default
+  powerpoint_presentation: default
+subtitle: Data Science Institute, American University
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning=FALSE, message=FALSE, comment = NA)
+
+library(tidyverse)
+library(ggplot2)
+library(psych)
+library(ltm)
+library(dplyr)
+
+
+
+load("C:\\Users\\ANDY\\Documents\\GitHub\\TEA-group-project\\data\\parental_involvement.Rdata")
+
+```
+
+## **Parental Involvement In School** 
+
+- Parent involvement is related to success of children in school
+- “The research overwhelmingly demonstrates that parent involvement in children's learning is positively related to achievement. Further, the research shows that the more intensively parents are involved in their children's learning, the more beneficial are the achievement effects. This holds true for all types of parent involvement in children's learning and for all types and ages of students.” (Cotton and Reed, 1989)   
+
+
+## **Study Purpose** 
+
+- To better understand factors impacting parent participation at their child's school
+
+## **PFI Questionnaire**
+
+- Parent and Family Involvement in Education
+- Conducted in 2016 by the National Center for Education Statistics
+- Collected every two or three years
+- 14,075 completed interviews
+- Parents respond about a selected child
+- Includes homeschooled and enrolled children
+
+## **Research Questions and Hypotheses** 
+
+ 
+1. Are the questions related to parental involvement of educational activities at home and school unidimensional? If not, what is the internal structure of these items?
+2. What factors are related to parental involvement in school-based activities? 
+
+
+## **Data Cleaning**
+
+- Recoded data to remove valid skips 
+- Converted some variables to 0 for no and 1 for yes to facilitate counting
+- Created new variables for family activities, school involement and satisfaction with school 
+- Removed homeschooled children
+
+## **Variables of Interest**
+
+Age2015= Age of child as of December 31st, 2015
+
+Hhtotalxx= number of people in the household
+
+Pargradex= parent or guardians highest level of education
+
+Ttlhhinc= total household income, categorical
+
+Scpubpri= child is enrolled in a public or private school
+
+Sneighbrx= parent moved to neighborhood for school
+
+Sefuturex=parent’s expectation for child’s future education (not finish HS to graduate school)
+
+RACEETH2- recoded race and ethnicity of child
+
+
+
+## **Participants/Demographics**
+
+```{r echo=FALSE,error=FALSE, message=FALSE, warning=FALSE}
+vars <-describe(parinv[c(7:10, 13,17:20)])
+meaningful <- vars[c(3:4, 8:9)]
+meaningful[c(1:4, 9),]
+```
+Most students attended public school.  The mean household size was 4 and the average age was 12.
+
+
+
+## **Parent Expectations**
+
+|Parental Expectation  |  <HS | HS | TS | Assoc | BA/BS | Professional |
+|----------------------|:----:|----|----|-------|-------|--------------|
+|percent               |  1   |  9 |  8 |   15  |  29   |     39       |
+
+
+ 
+
+
+
+
+## **Exploratory Factor Analysis**
+
+- The EFA supported a 3-factor structure with 18 items. The items were chosen based on their factor loading ( greater than 0.30)
+- A fair number of the items had low communalities, indicating their they do not share much variance with other items on the questionnaire. 
+- 9 items elminated because they failed to meet a minimum criterion a simple structure.
+- We were able to create three subscales, parental involvement in school-based activities, parental involvement in educational activities at homes, and satisfaction with school.  
+
+
+## **Descriptive Analysis (Correlations)**
+There were correlations between family activities and participation in school
+```{r}
+
+correl <-corr.test(parinv[17:20], y =NULL, use="pairwise", adjust="holm", alpha=.05)
+correl$r
+```
+
+
+## **Family Activities Measure**
+
+-  FA-count of at home activities
+
+- FOSTORY2X (told child a story past week)
+- focrafts(did arts and crafts past week)
+- fogames (played games with child past week)
+- fobuildx (worked on prokect with child past week)
+- fosport(played sports with child past week)
+- forespon (discussed time management with child past week)
+- fohistx (talked about family history with child past week)
+- folibrayx (took child to library past month, 
+- fobookstx (took child to bookstore past month)
+- foconcrtx (took child to concert past month)
+- fomuseumx (took child to museum past month) 
+- fozoox (took child to zoo past month) 
+- fogroupx (attended event with child past month)
+- fosprtevx (attend athletic event with child past month)
+  
+|Family activity  | Library | Bookstore | Live event | Museum | Zoo | Community event | Athletic |
+|-----------------|:-------:|-----------|------------|--------|-----|-----------------|----------|
+|Value            |   34    |  34       |  34        |   25   |   24|       54        |   42     |  
+
+
+## **School Satisfaction Items**
+
+-  SSatis- satisfaction with school
+
+- FCSHOOL (satisfaction with school child attends
+- FCTEACHR (satisfaction with teachers)
+- FCSTDS (satisfaction with academic standards)
+- FCORDER (satisfaction with order and discipline at school)
+- FCSUPPRT (satisfaction with way school interacts with parents
+
+
+## **Outcome Variable**
+- FS- count of school activities parent participated in
+Comprised of-
+- FSSPORTX (attended school or class event, science fair, etc.)
+- FSVOL(volunteered at school)
+- FSMTNG(attended a general school meeting)
+- FSPTMTNG (attended a PTA meeting
+- FSATCNFN ( gone to a parent teacher conference)
+- FSFUNDRS (participated in fundraising for the school)
+- FSCOMMTE (served on a school committee)
+- FSCOUNSLR (met with the guidance counselor in person)
+
+## **Summary of Created Variables**
+```{r warning=FALSE}
+meaningful <- vars[c(3:4, 8:9)]
+meaningful[c(5:8),]
+```
+Mean participation at school was 4 discrete activities
+
+## **Multiple Regression Model**
+
+\tiny
+```{r echo = FALSE, warning=FALSE}
+
+fit <-lm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis + public + sneighbrx + sefuturex, data=parinv) 
+
+summary(fit)
+
+```
+
+## **Poisson Model**
+```{r echo=FALSE, warning=FALSE}
+posfit <- glm(FS ~ AGE2015 + hhtotalxx + AGE2015 + pargradex + ttlhhinc + FA + SSatis + public + sneighbrx + sefuturex, data=parinv, family = poisson())
+summary(posfit)
+```
+
+
+
+## **Discussion**
+
+- We identified factors that help predict if parents will participate in school activities
+
+- -Best predictors were
+- Engage in educational activities at home
+- Parent's level of education
+- Expectations for the child's educational attainment
+
+- Age of student and attandance at a public school negatively impact participation 
+
+## **Caveats**
+- Data was unweighted and we did not take the complex sample design into account
+- We did not look at all possible variables
+
+
+## **THANK YOU!**
